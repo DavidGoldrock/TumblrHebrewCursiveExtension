@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "Tumblr Hebrew Cursive Extension",
+    "version": "1.0",
+  
+    "description": "Causes Tumblr's cursive to work with hebrew",
+  
+    "icons": {
+      "48": "icons/border-48.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://*.tumblr.com/*"],
+        "js": ["TumblrHebrewCursiveExtension.js"]
+      }
+    ]
+  }
+  
