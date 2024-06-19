@@ -1,19 +1,28 @@
 {
-    "manifest_version": 2,
-    "name": "Tumblr Hebrew Cursive Extension",
-    "version": "1.0",
-  
-    "description": "Causes Tumblr's cursive to work with hebrew",
-  
-    "icons": {
+  "name": "Tumblr Hebrew Cursive Extension",
+  "version": "1.0",
+  "description": "Causes Tumblr's cursive to work with hebrew",
+  "permissions": ["storage", "declarativeContent", "activeTab", "scripting"],
+
+  "host_permissions": [
+      "<all_urls>"
+  ],
+  "icons": {
       "48": "icons/border-48.png"
     },
-  
-    "content_scripts": [
+  "content_scripts": [
       {
         "matches": ["*://*.tumblr.com/*"],
         "js": ["TumblrHebrewCursiveExtension.js"]
       }
-    ]
-  }
-  
+    ],
+    "background": {
+      "scripts": "background.js"
+    },
+  "action": {
+      "default_icon": "icons/border-48.png",
+      "default_title": "Tumblr Hebrew Cursive Extension",
+      "default_popup": "index.html"
+  },
+  "manifest_version": 3
+}

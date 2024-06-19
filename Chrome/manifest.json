@@ -2,9 +2,8 @@
     "name": "Tumblr Hebrew Cursive Extension",
     "version": "1.0",
     "description": "Causes Tumblr's cursive to work with hebrew",
-    "permissions": [
-        "storage" 
-    ],
+    "permissions": ["storage", "declarativeContent", "activeTab", "scripting"],
+
     "host_permissions": [
         "<all_urls>"
     ],
@@ -17,6 +16,9 @@
           "js": ["TumblrHebrewCursiveExtension.js"]
         }
       ],
+      "background": {
+        "service_worker": "background.js"
+      },
     "action": {
         "default_icon": "icons/border-48.png",
         "default_title": "Tumblr Hebrew Cursive Extension",
